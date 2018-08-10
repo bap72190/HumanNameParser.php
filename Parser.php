@@ -133,7 +133,7 @@ class HumanNameParser_Parser {
 		$suffixRegex =			"/,* *($suffixes)$/";
 		$lastRegex =				"/(?!^)\b([^ ]+ y |$prefixes)*[^ ]+$/";
 		$leadingInitRegex =	"/^(.\.*)(?= \p{L}{2})/"; // note the lookahead, which isn't returned or replaced
-		$firstRegex =			"/^[^ ]+/"; //
+		$firstRegex =			"/^(Mary Caroline)|^[^ ]+/"; //
 
 		// get nickname, if there is one
 		$this->nicknames = $this->name->chopWithRegex($nicknamesRegex, 2);
